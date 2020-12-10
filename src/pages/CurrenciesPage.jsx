@@ -3,7 +3,8 @@ import React from 'react'
 export default function CurrenciesPage() {
     return (
         <div>
-            currencies
+            <h2>Currencies</h2>
+            <h3>This is the Currencies Page</h3>
         </div>
     )
 }

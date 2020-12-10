@@ -3,7 +3,7 @@ import React from 'react'
 export default function IndexesPage() {
     return (
         <div>
-            index
+            <h1>Indexes</h1>
         </div>
     )
 }

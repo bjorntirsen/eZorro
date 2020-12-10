@@ -1,6 +1,5 @@
 import { Route , Switch } from 'react-router-dom'
 import './App.css';
-import Navbar from './components/Navbar';
 import CryptoPage from './pages/CryptoPage';
 import CurrenciesPage from './pages/CurrenciesPage';
 import IndexesPage from './pages/IndexesPage';
@@ -11,27 +10,26 @@ import MarketPage from './pages/MarketPage';
 function App() {
   return (
     <div>
-      <Navbar />
       <Switch>
-
-        <Route path="/currencies" >
-          <CurrenciesPage />
+        
+        <Route>
+          <CurrenciesPage path="/currencies" />
         </Route>
 
-        <Route path="/crypto">
-          <CryptoPage />
+        <Route>
+          <CryptoPage path="/crypto" />
         </Route>
 
-        <Route path="/indexes">
-          <IndexesPage />
+        <Route>
+          <IndexesPage path="/indexes" />
         </Route>
 
-        <Route path="/market/:marketname/:instrument">
-          <MarketPage />
+        <Route>
+          <MarketPage path="/market" />
         </Route>
 
-        <Route path="/">
-          <LandingPage />
+        <Route>
+          <LandingPage path="/" />
         </Route>
 
       </Switch>      

@@ -14,24 +14,24 @@ function App() {
       <Navbar />
       <Switch>
 
-        <Route path="/currencies" >
-          <CurrenciesPage />
+        <Route>
+          <CurrenciesPage path="/currencies" />
         </Route>
 
-        <Route path="/crypto">
-          <CryptoPage />
+        <Route>
+          <CryptoPage path="/crypto" />
         </Route>
 
-        <Route path="/indexes">
-          <IndexesPage />
+        <Route>
+          <IndexesPage path="/indexes" />
         </Route>
 
-        <Route path="/market/:marketname/:instrument">
-          <MarketPage />
+        <Route>
+          <MarketPage path="/market" />
         </Route>
 
-        <Route path="/">
-          <LandingPage />
+        <Route>
+          <LandingPage path="/" />
         </Route>
 
       </Switch>      

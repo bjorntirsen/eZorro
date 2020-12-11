@@ -10,7 +10,7 @@ export default function CurrencyItem({currency}) {
                 </div>
                 <div className="card-body">
                     <p>Price in SEK: {currency.price}</p>
-                    <Link className="btn shadow btn-secondary btn-block" to="/details" >More info</Link>
+                    <Link className="btn shadow btn-secondary btn-block" to={`/currencies/${currency.ticker}`}>More info</Link>
                 </div>
             </div>
         </div>

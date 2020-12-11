@@ -18,7 +18,7 @@ export default function CurrenciesPage() {
                     <h2>Currencies</h2>
                     <h3>This is the Currencies Page</h3>
                 </div>
-                <div className="row">
+                <div className="row container">
                     {!currencyList && <p>Loading Currencies...</p>}
 
                     {currencyList && Object.entries(currencyList).map(currencyItem => {

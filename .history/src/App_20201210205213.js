@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      h ehe
       <Switch>
 
         <Route path="/currencies" >
@@ -26,8 +27,7 @@ function App() {
           <IndexesPage />
         </Route>
 
-        {/* <Route path="/markets/:marketname/:instrument"> */}
-        <Route path="/markets">
+        <Route path="/market/:marketname/:instrument">
           <MarketPage />
         </Route>
 

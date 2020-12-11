@@ -26,7 +26,6 @@ function App() {
           <IndexesPage />
         </Route>
 
-        {/* <Route path="/markets/:marketname/:instrument"> */}
         <Route path="/markets">
           <MarketPage />
         </Route>

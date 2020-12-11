@@ -11,14 +11,14 @@ export default function MarketPage() {
         .then(data => {setInfo(data)})
     }, [])
 
+    useEffect(() => {
+        console.log(info);
+    }, [info])
+
     return (
         <div>
-            Market Page
-            {info && Object.entries(info).map(market => {
-                const key = market[0]
-                const value = market[1]
-                return <p key={key}>value</p>
-            })}
+            market
+    {/* {info && <p>{info}</p> } */}
         </div>
     )
 }

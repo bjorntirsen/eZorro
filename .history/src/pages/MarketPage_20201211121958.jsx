@@ -11,14 +11,21 @@ export default function MarketPage() {
         .then(data => {setInfo(data)})
     }, [])
 
+    let test = {
+        hej: {
+            1: "yo",
+            2: "whatup",
+            3: {
+                h: "what?"
+            }
+        }
+    }
+    console.log(Object.keys(test));
+
     return (
         <div>
-            Market Page
-            {info && Object.entries(info).map(market => {
-                const key = market[0]
-                const value = market[1]
-                return <p key={key}>value</p>
-            })}
+            market
+            {info && <p>{Object.keys(info)}</p>}
         </div>
     )
 }

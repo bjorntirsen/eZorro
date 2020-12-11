@@ -13,12 +13,8 @@ export default function MarketPage() {
 
     return (
         <div>
-            Market Page
-            {info && Object.entries(info).map(market => {
-                const key = market[0]
-                const value = market[1]
-                return <p key={key}>value</p>
-            })}
+            market
+            {!info && info }
         </div>
     )
 }

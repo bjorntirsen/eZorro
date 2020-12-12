@@ -1,15 +1,28 @@
 import React, {useEffect, useState} from 'react'
 import CurrencyItem from '../components/CurrencyItem'
+import altAttributes from "../data/flagAltAttributes.json"
 
 export default function CurrenciesPage() {
     const [currencyList, setCurrencyList] = useState(null)
+    const [altList, setAltList] = useState(null)
 
     useEffect( () => {
         const url = "https://market-data-collector.firebaseio.com/market-collector/currencies/sek.json"
         fetch(url)
         .then(res => res.json())
         .then(data => setCurrencyList(data))
+        Object.entries(altAttributes).map(
+            item => {
+                setAltList(item[1])
+            })
     }, [] )
+
+    function setCountryCode(key) {
+        let tmp = key.substring(0, 2).toLowerCase()
+        if (tmp === "xa") return "cm"
+        else if (tmp === "xo") return "ci"
+        else return tmp
+    }
 
     return (
         <div className="container">
@@ -19,7 +32,7 @@ export default function CurrenciesPage() {
                     <h3>This is the Currencies Page</h3>
                 </div>
                 <div className="row container">
-                    {!currencyList &&
+                    {(!currencyList || !altList) &&
                         <div className="col-md-12">
                             <h4 className="pt-5 text-center">
                             Loading Currencies...
@@ -27,12 +40,16 @@ export default function CurrenciesPage() {
                         </div>
                     }
 
-                    {currencyList && 
+                    {(currencyList && altList) && 
                         Object.entries(currencyList).map(
                             currencyItem => {
                                 const key = currencyItem[0]
-                                const value = currencyItem[1]
-                                return <CurrencyItem key={key} currency={value}
+                                const currency = currencyItem[1]
+                                const countrycode = setCountryCode(key)
+                                const alt = altList[countrycode]
+                                return <CurrencyItem key={key} currency={currency}
+                                countrycode={countrycode}
+                                alt={alt}
                             />}
                         )
                     }

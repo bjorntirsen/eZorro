@@ -12,12 +12,11 @@ export default function CurrenciesPage() {
         .then(res => res.json())
         .then(data => setCurrencyList(data))
         Object.entries(altAttributes).map(
-            item => {
-                setAltList(item[1])
-            })
+            item => setAltList(item[1])
+        )
     }, [] )
 
-    function setCountryCode(key) {
+    function getCountryCode(key) {
         let tmp = key.substring(0, 2).toLowerCase()
         if (tmp === "xa") return "cm"
         else if (tmp === "xo") return "ci"
@@ -45,7 +44,7 @@ export default function CurrenciesPage() {
                             currencyItem => {
                                 const key = currencyItem[0]
                                 const currency = currencyItem[1]
-                                const countrycode = setCountryCode(key)
+                                const countrycode = getCountryCode(key)
                                 const alt = altList[countrycode]
                                 return <CurrencyItem key={key} currency={currency}
                                 countrycode={countrycode}

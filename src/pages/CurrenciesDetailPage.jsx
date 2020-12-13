@@ -1,15 +1,31 @@
 import React, { useEffect, useState } from 'react'
+import altAttributes from "../data/flagAltAttributes.json"
 
 export default function CurrenciesDetailPage(props) {
     const [currencyItem, setCurrencyItem] = useState(null)
+    const [countrycode, setCountrycode] = useState(null)
+    const [altList, setAltList] = useState(null)
+    function getCountryCode(key) {
+        let tmp = key.substring(0, 2).toLowerCase()
+        if (tmp === "xa") return "cm"
+        else if (tmp === "xo") return "ci"
+        else return tmp
+    }
+
 
     useEffect( () => {
         const id = props.match.params.id
         const url = `https://market-data-collector.firebaseio.com/market-collector/currencies/sek/${id}.json`
         fetch(url)
         .then(res => res.json())
-        .then(data => setCurrencyItem(data))
-    }, [])
+        .then(data => {
+            setCurrencyItem(data)
+            setCountrycode(getCountryCode(data.ticker))
+        })
+        Object.entries(altAttributes).map(
+            item => setAltList(item[1])
+        )
+    }, [] )
 
     return (
         <div className="container bg-light p-4 shadow">
@@ -37,6 +53,14 @@ export default function CurrenciesDetailPage(props) {
                             {currencyItem.name}
                             </h2>
                         </div>
+                    </div>
+                    <div className="d-flex">
+                        <img
+                        className="img-fluid mx-auto mb-2"
+                        src={`https://flagcdn.com/w320/${countrycode}.png`}
+                        srcSet={`https://flagcdn.com/w640/${countrycode}.png 2x`}
+                        width="320"
+                        alt={altList[countrycode]} />
                     </div>
                     <div className="row">
                         <div className="col-md-12 text-center">

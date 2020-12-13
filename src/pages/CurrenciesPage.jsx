@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import CurrencyInfo from '../components/CurrencyInfo'
 import CurrencyItem from '../components/CurrencyItem'
 import altAttributes from "../data/flagAltAttributes.json"
 
@@ -24,36 +25,40 @@ export default function CurrenciesPage() {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12 text-center">
-                    <h2>Currencies</h2>
-                    <h3>This is the Currencies Page</h3>
-                </div>
-                <div className="row container">
-                    {(!currencyList || !altList) &&
-                        <div className="col-md-12">
-                            <h4 className="pt-5 text-center">
-                            Loading Currencies...
-                            </h4>
-                        </div>
-                    }
+        <>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h2>Currencies</h2>
+                        <h3>This is the Currencies Page</h3>
+                    </div>
+                    <div className="row container">
+                        {(!currencyList || !altList) &&
+                            <div className="col-md-12">
+                                <h4 className="pt-5 text-center">
+                                Loading Currencies...
+                                </h4>
+                            </div>
+                        }
 
-                    {(currencyList && altList) && 
-                        Object.entries(currencyList).map(
-                            currencyItem => {
-                                const key = currencyItem[0]
-                                const currency = currencyItem[1]
-                                const countrycode = getCountryCode(key)
-                                const alt = altList[countrycode]
-                                return <CurrencyItem key={key} currency={currency}
-                                countrycode={countrycode}
-                                alt={alt}
-                            />}
-                        )
-                    }
+                        {(currencyList && altList) && 
+                            Object.entries(currencyList).map(
+                                currencyItem => {
+                                    const key = currencyItem[0]
+                                    const currency = currencyItem[1]
+                                    const countrycode = getCountryCode(key)
+                                    const alt = altList[countrycode]
+                                    return <CurrencyItem key={key} currency={currency}
+                                    countrycode={countrycode}
+                                    alt={`Flag of ${alt}`}
+                                />}
+                            )
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <CurrencyInfo />
+        </>
     )
 }

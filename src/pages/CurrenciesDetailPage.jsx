@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ArrowIconStyled from '../components/ArrowIconStyled'
 import CurrencyInfo from '../components/CurrencyInfo'
 import altAttributes from "../data/flagAltAttributes.json"
 
@@ -74,25 +75,31 @@ export default function CurrenciesDetailPage(props) {
                             <div className="col-md-12">
                                 <h3>Changes in relative value</h3>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>Today: {currencyItem.today}</h5>
+                                <ArrowIconStyled value={currencyItem.today} />
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>This week: {currencyItem.w1}</h5>
+                                <ArrowIconStyled value={currencyItem.w1} />
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>Month to Date: {currencyItem.mtd}</h5>
+                                <ArrowIconStyled value={currencyItem.mtd} />
                             </div>
                         </div>
                         <div className="row text-center">
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>Year to Date: {currencyItem.ytd}</h5>
+                                <ArrowIconStyled value={currencyItem.ytd} />
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>Last three years: {currencyItem.y3}</h5>
+                                <ArrowIconStyled value={currencyItem.y3} />
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-flex align-items-center justify-content-center">
                                 <h5>Last five years: {currencyItem.y5}</h5>
+                                <ArrowIconStyled value={currencyItem.y5} />
                             </div>
                         </div>
                     </>

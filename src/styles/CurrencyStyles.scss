@@ -1,0 +1,16 @@
+$font-family-sans-serif: 'Source Sans Pro',
+sans-serif;
+/* $font-family-monospace: 'Merriweather',
+serif; */
+
+$primary: #1E7D34;
+$secondary: #5EBD74;
+$success: #28A745;
+$danger: #f57e80;
+$warning: #F1AB10;
+$info: #94D3A2;
+$light: #C9E9D1;
+$dark: #C9E9D1;
+$light_transparent: rgba(201, 233, 209, 0.85);
+
+@import 'bootstrap/scss/bootstrap';

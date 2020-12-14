@@ -2,6 +2,7 @@ import { Route , Switch } from 'react-router-dom'
 import './App.css';
 import Navbar from './components/Navbar';
 import CryptoPage from './pages/CryptoPage';
+import CurrenciesDetailPage from './pages/CurrenciesDetailPage';
 import CurrenciesPage from './pages/CurrenciesPage';
 import IndexesPage from './pages/IndexesPage';
 import LandingPage from './pages/LandingPage';
@@ -14,6 +15,8 @@ function App() {
       <Navbar />
       <Switch>
 
+        <Route path="/currencies/:id" component={CurrenciesDetailPage} />
+        
         <Route path="/currencies" >
           <CurrenciesPage />
         </Route>

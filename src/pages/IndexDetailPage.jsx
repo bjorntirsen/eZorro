@@ -10,7 +10,7 @@ export default function IndexDetailPage(props) {
         fetch(url)
         .then(resp => resp.json())
         .then(data => setIndexItem(data))
-    },[])
+    }, [] )
     return (
         <div class="container">
           {!indexItem && <p>Loading</p>}
@@ -18,7 +18,7 @@ export default function IndexDetailPage(props) {
               <>
               <h4>{indexItem.ticker}</h4>
               <h4>{indexItem.name}</h4>
-              <p>test</p>
+              <h4>{indexItem.price}</h4>
               </>
           )}
             

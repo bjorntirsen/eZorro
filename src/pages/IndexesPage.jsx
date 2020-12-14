@@ -12,31 +12,29 @@ export default function IndexesPage() {
         .then(data => setIndexesList(data.se))
     }, [])
     return (
-        <div className="container">
-            <div className="col text-center">
-              <h1>Indexes</h1>
+        <div class="container text-center mb-4">
+            <h1>Indexes</h1>
+            <div className="row p-2 bg-light mb-3 border">
+                <div class="col">
+                    <h3>Index</h3>           
+                </div>
+                <div class="col">
+                    <h3>Price</h3>
+                </div>
+                <div class="col">
+                    <h3>Today</h3>    
+                </div>
+                <div class="col">
+                    <h3>info</h3>    
+                </div>    
+            </div>     
 
-              <div className="row">
-                <table class="table table-striped">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">More info</th>
-                    </tr>
-                </thead>
-                <tbody>                  
-                    {!indexesList && <p> loading...</p>}
-
-                    {indexesList && Object.entries(indexesList).map(item => {
-                    const key = item[0]
-                    const value = item[1]
-                    return <IndexItem key = {key} index={value}/>
-                    })}
-                </tbody>    
-               </table>  
-              </div>
-            </div>      
+            {!indexesList && <p> loading...</p>}
+                {indexesList && Object.entries(indexesList).map(item => {
+                const key = item[0]
+                const value = item[1]
+                return <IndexItem key = {key} index={value}/>
+            })}    
         </div>
     )
 }

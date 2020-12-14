@@ -7,14 +7,6 @@ import CurrenciesPage from './pages/CurrenciesPage';
 import IndexesPage from './pages/IndexesPage';
 import LandingPage from './pages/LandingPage';
 import MarketPage from './pages/MarketPage';
-import { Route, Switch } from "react-router-dom"
-import "./App.css"
-import Navbar from "./components/Navbar"
-import CryptoPage from "./pages/CryptoPage"
-import CurrenciesPage from "./pages/CurrenciesPage"
-import IndexesPage from "./pages/IndexesPage"
-import LandingPage from "./pages/LandingPage"
-import MarketPage from "./pages/MarketPage"
 
 import CryptoDetailPage from "./pages/CryptoDetailPage"
 import IndexDetailPage from './pages/IndexDetailPage'

@@ -17,6 +17,7 @@ import LandingPage from "./pages/LandingPage"
 import MarketPage from "./pages/MarketPage"
 
 import CryptoDetailPage from "./pages/CryptoDetailPage"
+import IndexDetailPage from './pages/IndexDetailPage'
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
           <CryptoPage />
         </Route>
 
+        <Route path="/Indexes/:id" component={IndexDetailPage}/>
+        
         <Route path="/indexes">
           <IndexesPage />
         </Route>

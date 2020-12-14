@@ -6,7 +6,7 @@ import CurrenciesPage from './pages/CurrenciesPage';
 import IndexesPage from './pages/IndexesPage';
 import LandingPage from './pages/LandingPage';
 import MarketPage from './pages/MarketPage';
-
+import IndexDetailPage from './pages/IndexDetailPage'
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
           <CryptoPage />
         </Route>
 
+        <Route path="/Indexes/:id" component={IndexDetailPage}/>
         <Route path="/indexes">
           <IndexesPage />
         </Route>

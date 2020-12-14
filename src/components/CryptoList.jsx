@@ -12,7 +12,7 @@ export default function CryptoList({ value, id }) {
           <h3>{value.name}</h3>
         </div>
       </Link>
-        <p>Price: {value.price}</p>
+      <p>Price: {value.price}</p>
     </div>
   )
 }

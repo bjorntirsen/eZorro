@@ -14,7 +14,7 @@ export default function CryptoPage() {
 
   return (
     <div className="container">
-      <h2 className="text-center mb-5">Crypto list</h2>
+      <h2 className="text-center mb-5">Crypto currencies</h2>
       {!cryptoList && <p>Loading data</p>}
       <div className="row justify-content-center">
         {cryptoList &&

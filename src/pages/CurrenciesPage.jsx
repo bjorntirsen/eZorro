@@ -29,8 +29,8 @@ export default function CurrenciesPage() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h2>Currencies</h2>
-                        <h3>This is the Currencies Page</h3>
+                        <h2 className="text-uppercase font-weight-bold">Currencies</h2>
+                        <h3 className="font-monospace">Click on a currency for details</h3>
                     </div>
                     <div className="row container">
                         {(!currencyList || !altList) &&

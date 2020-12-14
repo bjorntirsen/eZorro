@@ -6,7 +6,7 @@ export default function CurrencyItem({currency, countrycode, alt}) {
 
     return (
         <div className="col-md-3 col-sm-4">
-            <div className="card shadow my-2 text-center">
+            <div className="card bg-light shadow my-2 text-center">
                 <div className="card-header">
                     <h4>{currency.name}</h4>
                 </div>

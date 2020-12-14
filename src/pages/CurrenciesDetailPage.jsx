@@ -34,7 +34,7 @@ export default function CurrenciesDetailPage(props) {
             <div className="container bg-light p-4 shadow">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h1>Currency:</h1>
+                        <h1 className="text-uppercase font-weight-bold">Currency</h1>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ export default function CurrenciesDetailPage(props) {
                     <>
                         <div className="row">
                             <div className="col-md-12">
-                                <h2 className="p-3 text-center text-uppercase bg-primary text-light shadow-sm">
+                                <h2 className="p-3 text-center text-uppercase bg-primary text-light shadow-sm serif">
                                 {currencyItem.name}
                                 </h2>
                             </div>

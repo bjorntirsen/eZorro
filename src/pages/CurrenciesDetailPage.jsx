@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ArrowIconStyled from '../components/ArrowIconStyled'
+import CurrencyCountryFacts from '../components/CurrencyCountryFacts'
 import CurrencyInfo from '../components/CurrencyInfo'
 import altAttributes from "../data/flagAltAttributes.json"
 
@@ -17,12 +18,12 @@ export default function CurrenciesDetailPage(props) {
 
     useEffect( () => {
         const id = props.match.params.id
+        setCountrycode(getCountryCode(id))
         const url = `https://market-data-collector.firebaseio.com/market-collector/currencies/sek/${id}.json`
         fetch(url)
         .then(res => res.json())
         .then(data => {
             setCurrencyItem(data)
-            setCountrycode(getCountryCode(data.ticker))
         })
         Object.entries(altAttributes).map(
             item => setAltList(item[1])
@@ -57,18 +58,23 @@ export default function CurrenciesDetailPage(props) {
                                 </h2>
                             </div>
                         </div>
-                        <div className="d-flex my-3">
-                            <img
-                            className="img-fluid mx-auto mb-2"
-                            src={`https://flagcdn.com/w320/${countrycode}.png`}
-                            srcSet={`https://flagcdn.com/w640/${countrycode}.png 2x`}
-                            width="320"
-                            alt={`Flag of ${altList[countrycode]}`} />
-                        </div>
                         <div className="row">
-                            <div className="col-md-12 text-center">
-                                <h3>Current exchange rate</h3>
-                                <h4>Price in SEK: <span className="badge bg-primary text-light">{currencyItem.price}</span></h4>
+                            <div className="col-md-6 my-auto">
+                                <div className="d-flex my-3">
+                                    <img
+                                    className="img-fluid mx-auto mb-2 shadow"
+                                    src={`https://flagcdn.com/w320/${countrycode}.png`}
+                                    srcSet={`https://flagcdn.com/w640/${countrycode}.png 2x`}
+                                    width="320"
+                                    alt={`Flag of ${altList[countrycode]}`} />
+                                </div>
+                                <div className="text-center">
+                                    <h3>Current exchange rate</h3>
+                                    <h4>Price in SEK: <span className="badge bg-primary text-light">{currencyItem.price}</span></h4>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <CurrencyCountryFacts countrycode={countrycode} />
                             </div>
                         </div>
                         <div className="row text-center">

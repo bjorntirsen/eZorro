@@ -6,14 +6,14 @@ export default function CurrencyItem({currency, countrycode, alt}) {
 
     return (
         <div className="col-md-3 col-sm-4">
-            <div className="card bg-light shadow my-2 text-center">
+            <div className="card shadow my-2 text-center">
                 <div className="card-header">
                     <h4>{currency.name}</h4>
                 </div>
                 <div className="card-body">
                     <div className="d-flex">
                         <img
-                        className="img-fluid mx-auto mb-2"
+                        className="img-fluid mx-auto mb-2 shadow"
                         src={`https://flagcdn.com/w160/${countrycode}.png`}
                         srcSet={`https://flagcdn.com/w320/${countrycode}.png 2x`}
                         width="160"

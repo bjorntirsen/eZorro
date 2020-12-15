@@ -1,36 +1,56 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import 'bootstrap/js/src/collapse.js';
 
 export default function Navbar() {
     return (
-        <div>
-            <ul>
-                <li>
-                    <Link to="/">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <Link 
+                className="navbar-brand"
+                to="/">
+                StockMarket
+            </Link>
+            <button 
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" />
+            </button>
+            <div
+                className="collapse navbar-collapse"
+                id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                    <Link 
+                        className="nav-item nav-link active"
+                        to="/">
                         Home
                     </Link>
-                </li>
-                <li>
-                    <Link to="/crypto">
+                    <Link 
+                        className="nav-item nav-link active"
+                        to="/crypto">
                         Crypto
                     </Link>
-                </li>
-                <li>
-                    <Link to="/currencies">
+                    <Link 
+                        className="nav-item nav-link active"
+                        to="/currencies">
                         Currencies
                     </Link>
-                </li>
-                <li>
-                    <Link to="/indexes">
+                    <Link
+                        className="nav-item nav-link active"
+                        to="/indexes">
                         Indexes
                     </Link>
-                </li>
-                <li>
-                    <Link to="/markets">
+                    <Link
+                        className="nav-item nav-link active"
+                        to="/markets">
                         Markets
                     </Link>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </div>
+        </nav>
     )
 }

@@ -8,7 +8,7 @@ import InstrumentPage from './pages/InstrumentPage';
 import LandingPage from './pages/LandingPage';
 import MarketDetailPage from './pages/MarketDetailPage';
 import MarketPage from './pages/MarketPage';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (

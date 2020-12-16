@@ -7,7 +7,8 @@ import CurrenciesPage from './pages/CurrenciesPage';
 import IndexesPage from './pages/IndexesPage';
 import LandingPage from './pages/LandingPage';
 import MarketPage from './pages/MarketPage';
-
+import MarketDetailPage from './pages/MarketDetailPage';
+import InstrumentPage from './pages/InstrumentPage';
 import CryptoDetailPage from "./pages/CryptoDetailPage"
 import IndexDetailPage from './pages/IndexDetailPage'
 
@@ -34,7 +35,11 @@ function App() {
           <IndexesPage />
         </Route>
 
-        <Route path="/market/:marketname/:instrument">
+        <Route path="/markets/:marketname/:instrument" component={InstrumentPage} />
+        
+        <Route path="/markets/:marketname" component={MarketDetailPage} />
+        
+        <Route path="/markets">
           <MarketPage />
         </Route>
 

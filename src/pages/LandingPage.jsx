@@ -6,9 +6,9 @@ export default function LandingPage() {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <div className="d-flex">
+                    <div className="d-flex align-items-center justify-content-center">
                         <h1 className="text-center font-weight-bold">Welcome to eZorro!</h1>
-                        <img className="img-fluid" src="/images/zorro-w512.png" alt=""/>
+                        <img className="img-fluid w-25" src="/images/zorro-w320.png" alt=""/>
                     </div>
                 </div>
             </div>

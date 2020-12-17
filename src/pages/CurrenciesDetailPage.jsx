@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import ArrowIconStyled from '../components/ArrowIconStyled'
 import CurrencyCountryFacts from '../components/CurrencyCountryFacts'
 import CurrencyInfo from '../components/CurrencyInfo'
-import altAttributes from "../data/flagAltAttributes.json"
 
 export default function CurrenciesDetailPage(props) {
     const [currencyItem, setCurrencyItem] = useState(null)
     const [countrycode, setCountrycode] = useState(null)
-    const [altList, setAltList] = useState(null)
+    const [countryFacts, setCountryFacts] = useState(null)
+    const id = props.match.params.id
+
     function getCountryCode(key) {
         let tmp = key.substring(0, 2).toLowerCase()
         if (tmp === "xa") return "cm"
@@ -15,9 +16,7 @@ export default function CurrenciesDetailPage(props) {
         else return tmp
     }
 
-
     useEffect( () => {
-        const id = props.match.params.id
         setCountrycode(getCountryCode(id))
         const url = `https://market-data-collector.firebaseio.com/market-collector/currencies/sek/${id}.json`
         fetch(url)
@@ -25,21 +24,44 @@ export default function CurrenciesDetailPage(props) {
         .then(data => {
             setCurrencyItem(data)
         })
-        Object.entries(altAttributes).map(
-            item => setAltList(item[1])
-        )
-    }, [] )
+        .catch(err => {
+            console.error(err);
+        })
+    }, [id] )
+
+    useEffect( () => {
+        if (countrycode) {
+            fetch(`https://restcountries-v1.p.rapidapi.com/alpha/${countrycode}`, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-key": "d37c786bd7msh581d0c8d9d07666p15b31bjsn355ddcb325d8",
+                    "x-rapidapi-host": "restcountries-v1.p.rapidapi.com"
+                }
+            })
+            .then(response => {
+                return response.json()
+            
+            })
+            .then(data => {
+                console.log(data)
+                setCountryFacts(data)
+            })
+            .catch(err => {
+                console.error(err);
+            })
+        }
+    }, [countrycode])
 
     return (
         <>
-            <div className="container bg-light p-4 shadow">
+            <div className="container bg-light p-4 shadow mt-3">
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <h1 className="text-uppercase font-weight-bold">Currency</h1>
                     </div>
                 </div>
 
-                {!currencyItem &&
+                {(!currencyItem || !countryFacts) &&
                     <div className="row">
                         <div className="col-md-12">
                             <h2 className="pt-5 text-center">
@@ -49,7 +71,7 @@ export default function CurrenciesDetailPage(props) {
                     </div>
                 }
 
-                {currencyItem &&
+                {(currencyItem && countryFacts) &&
                     <>
                         <div className="row">
                             <div className="col-md-12">
@@ -66,7 +88,7 @@ export default function CurrenciesDetailPage(props) {
                                     src={`https://flagcdn.com/w320/${countrycode}.png`}
                                     srcSet={`https://flagcdn.com/w640/${countrycode}.png 2x`}
                                     width="320"
-                                    alt={`Flag of ${altList[countrycode]}`} />
+                                    alt={`Flag of ${countryFacts.name}`} />
                                 </div>
                                 <div className="text-center">
                                     <h3>Current exchange rate</h3>
@@ -74,7 +96,7 @@ export default function CurrenciesDetailPage(props) {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <CurrencyCountryFacts countrycode={countrycode} />
+                                <CurrencyCountryFacts country={countryFacts} />
                             </div>
                         </div>
                         <div className="row text-center">

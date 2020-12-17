@@ -6,9 +6,9 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link 
-                className="navbar-brand"
+                className="navbar-brand my-headline__brand"
                 to="/">
-                StockMarket
+                eZorro!
             </Link>
             <button 
                 className="navbar-toggler"

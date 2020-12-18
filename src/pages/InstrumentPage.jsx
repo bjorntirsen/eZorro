@@ -49,54 +49,53 @@ export default function InstrumentPage(props) {
                             </div>
                             <div className="col-sm-12 col-md-6 d-flex justify-content-center">
                                 <div>
-                                    
-                                <h4>History</h4>
-                                <div className="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Since</th>
-                                            <th scope="col">+/-%</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1 week</td>
-                                            <td>{stock.w1}</td>
-                                            <td className="py-1">
-                                                <ArrowIconStyled value={stock.w1} />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1 month</td>
-                                            <td>{stock.mtd}</td>
-                                            <td className="py-1">
-                                                <ArrowIconStyled value={stock.mtd} />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1 year</td>
-                                            <td>{stock.ytd}</td>
-                                            <td className="py-1">
-                                                <ArrowIconStyled value={stock.ytd} />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3 years</td>
-                                            <td>{stock.y3}</td>
-                                            <td className="py-1">
-                                                <ArrowIconStyled value={stock.y3} />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5 years</td>
-                                            <td>{stock.y5}</td>
-                                            <td className="py-1">
-                                                <ArrowIconStyled value={stock.y5} />
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </div>
+                                    <h4>History</h4>
+                                    <div className="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Since</th>
+                                                <th scope="col">+/-%</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1 week</td>
+                                                <td>{stock.w1}</td>
+                                                <td className="py-1">
+                                                    <ArrowIconStyled value={stock.w1} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1 month</td>
+                                                <td>{stock.mtd}</td>
+                                                <td className="py-1">
+                                                    <ArrowIconStyled value={stock.mtd} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1 year</td>
+                                                <td>{stock.ytd}</td>
+                                                <td className="py-1">
+                                                    <ArrowIconStyled value={stock.ytd} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3 years</td>
+                                                <td>{stock.y3}</td>
+                                                <td className="py-1">
+                                                    <ArrowIconStyled value={stock.y3} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5 years</td>
+                                                <td>{stock.y5}</td>
+                                                <td className="py-1">
+                                                    <ArrowIconStyled value={stock.y5} />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ export default function IndexItem({index}) {
           <h3>{index.today}</h3>
         </div> 
         <div class="col">
-          <Link className="btn btn-primary " to={`/indexes/${index.ticker}`} >More info</Link>        
+          <Link className="btn btn-primary " to={`/indexes/${index.ticker}`} >More Details</Link>        
         </div>   
       </div>  
     )

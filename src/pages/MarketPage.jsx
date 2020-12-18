@@ -24,22 +24,25 @@ export default function MarketPage() {
     }
 
     return (
-        <div>
-            <p>Market Page</p>
-
-            {!marketList && <p>Loading</p>}
-            {marketList && Object.entries(marketList).map(market => {
-                const marketName = market[0]
-                const marketDisplayName = formatName(marketName)
-
-                return (
-                    <div key={marketName}>
-                        <Link key={market} to={`/markets/${marketName}`}>
-                            {marketDisplayName}
-                        </Link>
-                    </div>
-                )
-            })}
+        <div className="container justify-content-center">
+            <div className="col-12 justify-self-center">
+                <div className="justify-items-center">
+                    <h3 className="mt-5 mb-5">Market Page</h3>
+                    {!marketList && <p>Loading</p>}
+                    {marketList && Object.entries(marketList).map(market => {
+                        const marketName = market[0]
+                        const marketDisplayName = formatName(marketName)
+                        
+                        return (
+                            <div key={marketName}>
+                                <Link key={market} to={`/markets/${marketName}`}>
+                                    {marketDisplayName}
+                                </Link>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </div>
     )
 }

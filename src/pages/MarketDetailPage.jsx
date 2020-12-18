@@ -26,8 +26,8 @@ export default function MarketDetailPage(props) {
     }
 
     return (
-        <div>
-            <p>{marketDisplayName}</p>
+        <div className="container justify-content-center">
+            <h3 className="mt-5 mb-5">{marketDisplayName}</h3>
 
             {!stockList && <p>Loading</p>}
             {stockList && 

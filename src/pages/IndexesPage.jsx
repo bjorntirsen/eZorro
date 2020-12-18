@@ -12,7 +12,7 @@ export default function IndexesPage() {
         .then(data => setIndexesList(data.se))
     }, [])
     return (
-        <div class="container text-center mb-4">
+        <div className="container text-center mb-4">
             <h1>Indexes</h1>
             <div className="row p-2 bg-light mb-3 border">
                 <div class="col">
@@ -25,7 +25,7 @@ export default function IndexesPage() {
                     <h3>Today</h3>    
                 </div>
                 <div class="col">
-                    <h3>info</h3>    
+                    <h3>More Details</h3>    
                 </div>    
             </div>     
 

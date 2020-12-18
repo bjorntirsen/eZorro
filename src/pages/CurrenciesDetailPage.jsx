@@ -8,7 +8,6 @@ export default function CurrenciesDetailPage(props) {
     const [countrycode, setCountrycode] = useState(null)
     const [countryFacts, setCountryFacts] = useState(null)
     const id = props.match.params.id
-    console.log(id)
 
     function getCountryCode(key) {
         let tmp = key.substring(0, 2).toLowerCase()
@@ -44,7 +43,6 @@ export default function CurrenciesDetailPage(props) {
             
             })
             .then(data => {
-                console.log(data)
                 setCountryFacts(data)
             })
             .catch(err => {

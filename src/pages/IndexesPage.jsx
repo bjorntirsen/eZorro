@@ -15,16 +15,16 @@ export default function IndexesPage() {
         <div className="container text-center mb-4">
             <h1>Indexes</h1>
             <div className="row p-2 bg-light mb-3 border">
-                <div class="col">
+                <div className="col">
                     <h3>Index</h3>           
                 </div>
-                <div class="col">
+                <div className="col">
                     <h3>Price</h3>
                 </div>
-                <div class="col">
+                <div className="col">
                     <h3>Today</h3>    
                 </div>
-                <div class="col">
+                <div className="col">
                     <h3>More Details</h3>    
                 </div>    
             </div>     

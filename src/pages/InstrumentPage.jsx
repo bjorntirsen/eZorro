@@ -52,7 +52,7 @@ export default function InstrumentPage(props) {
                             '               d-flex justify-content-center">
                                 <div>
                                     <h4>History</h4>
-                                    <div className="table">
+                                    <table className="table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Since</th>
@@ -97,7 +97,7 @@ export default function InstrumentPage(props) {
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </div>
+                                    </table>
                                 </div>
                             </div>
                         </div>

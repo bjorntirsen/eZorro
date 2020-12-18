@@ -5,11 +5,6 @@ export default function CryptoList({ value, id }) {
   //console.log(id) Inehåller alla namn på valutorna
   // console.log(value) Innehåller arryen med alla värden
 
-  let defaultImage = () => {
-    let onError = "/icons/bitcoin.png"
-    return onError
-  }
-
   return (
     <div className=" mainDiv container col-sm-6 col-lg-4">
       <Link to={`/CryptoDetailPage/${id}`}>
@@ -20,8 +15,9 @@ export default function CryptoList({ value, id }) {
           <img
             className="pt-4 pb-4"
             src={`/icons/${value.name}.png`}
-            alt={defaultImage}
+            alt="Error"
           />
+
           <p>Price: {value.price}</p>
         </div>
       </Link>

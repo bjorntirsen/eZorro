@@ -37,6 +37,11 @@
   }
 }
 
-.link:hover {
-  color: rgb(255, 149, 0);
+.mainDiv {
+  transition: all 0.1s ease-in-out;
 }
+
+.mainDiv:hover {
+  transform: translatey(-30px);
+}
+ 

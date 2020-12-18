@@ -15,13 +15,14 @@ export default function CryptoPage() {
   return (
     <div className="container">
       <h2 className="text-center mb-5">Crypto currencies</h2>
-      {!cryptoList && <p>Loading data</p>}
-      <div className="row justify-content-center">
+      {!cryptoList && <p className="text-center">Loading data</p>}
+      <div className="row ">
         {cryptoList &&
-          Object.entries(cryptoList).map((item) => {
+          Object.entries(cryptoList).map((item, index) => {
+            const key = index
             const id = item[0]
             const value = item[1]
-            return <CryptoList id={id} value={value} />
+            return <CryptoList id={id} value={value} key={key} />
           })}
       </div>
     </div>

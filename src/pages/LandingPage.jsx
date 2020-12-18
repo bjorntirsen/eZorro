@@ -8,7 +8,7 @@ export default function LandingPage() {
                 <div className="col-md-12">
                     <div className="d-flex align-items-center justify-content-center my-headline">
                         <h1 className="text-center font-weight-bold"><small className="text-muted align-self-start">Welcome to</small><br /><span className="display-4 my-headline__brand">eZorro!</span></h1>
-                        <img className="img-fluid w-25 p-3" src="/images/zorro2-w320.png" alt=""/>
+                        <img className="img-fluid w-25 p-3" src="/images/zorro-w320.png" alt=""/>
                     </div>
                     <div className="d-flex align-items-center justify-content-center">
                         <audio

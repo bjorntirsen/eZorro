@@ -25,7 +25,8 @@ export default function InstrumentPage(props) {
                 <>
                     <div className="container">
                         <div className="row m-4">
-                            <div className="col-12 d-flex flex-row align-items-center
+                            <div className="col-12 d-flex flex-row
+                                            align-items-center
                                             justify-content-center">
                                 <h3>{nickName(stock.ticker)}</h3>
                                 <h4 className="ml-2 mr-2">|</h4>
@@ -33,7 +34,8 @@ export default function InstrumentPage(props) {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-12 col-md-6 d-flex justify-content-center mb-4">
+                            <div className="col-sm-12 col-md-6 d-flex 
+                                            justify-content-center mb-4">
                                 <div>
                                     <div className="row">
                                         <h4 className="mr-2">Price:</h4>
@@ -46,7 +48,8 @@ export default function InstrumentPage(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-md-6 d-flex justify-content-center">
+                            <div className="col-sm-12 col-md-6
+                            '               d-flex justify-content-center">
                                 <div>
                                     <h4>History</h4>
                                     <div className="table">

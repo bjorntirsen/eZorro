@@ -21,7 +21,6 @@ export default function InstrumentPage(props) {
 
         <div>
             {!stock && <p>Loading</p>}
-            {stock && console.log(stock)}
             {stock && 
                 <>
                     <div className="container">

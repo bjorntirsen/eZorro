@@ -25,7 +25,7 @@ export default function InstrumentPage(props) {
             {stock && 
                 <>
                     <div className="container">
-                        <div className="row">
+                        <div className="row m-4">
                             <div className="col-12 d-flex flex-row align-items-center
                                             justify-content-center">
                                 <h3>{nickName(stock.ticker)}</h3>
@@ -34,18 +34,22 @@ export default function InstrumentPage(props) {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-12 col-md-6">
-                                <div className="row">
-                                    <h4 className="mr-2">Price:</h4>
-                                    <h4>{stock.price}</h4>
-                                </div>
-                                <div className="row">
-                                    <h4 className="mr-2">Today:</h4>
-                                    <h4>{stock.today}</h4>
-                                    <ArrowIconStyled value={stock.today} />
+                            <div className="col-sm-12 col-md-6 d-flex justify-content-center mb-4">
+                                <div>
+                                    <div className="row">
+                                        <h4 className="mr-2">Price:</h4>
+                                        <h4>{stock.price}</h4>
+                                    </div>
+                                    <div className="row">
+                                        <h4 className="mr-2">Today:</h4>
+                                        <h4>{stock.today}</h4>
+                                        <ArrowIconStyled value={stock.today} />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-md-6">
+                            <div className="col-sm-12 col-md-6 d-flex justify-content-center">
+                                <div>
+                                    
                                 <h4>History</h4>
                                 <div className="table">
                                     <thead>
@@ -92,6 +96,7 @@ export default function InstrumentPage(props) {
                                             </td>
                                         </tr>
                                     </tbody>
+                                </div>
                                 </div>
                             </div>
                         </div>

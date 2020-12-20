@@ -13,6 +13,7 @@ export default function CurrenciesPage() {
         let tmp = key.substring(0, 2).toLowerCase()
         if (tmp === "xa") return "cm"
         else if (tmp === "xo") return "ci"
+        else if (tmp === "eu") return "de"
         else return tmp
     }
 

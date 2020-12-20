@@ -31,7 +31,7 @@ export default function CurrencyCountryFacts({country}) {
                             <div className="col-md-6">
                                 <p>Size: {formattedNumber(country.area)} km&sup2;</p>
                                 <p>Native name: {country.nativeName}</p>
-                                <p>Currency symbol: {country.currencies[0].symbol} </p>
+                                <p>Top level web domain: {country.topLevelDomain[0]} </p>
                             </div>
                         </div>
                     </div>

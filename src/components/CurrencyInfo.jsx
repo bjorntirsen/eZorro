@@ -15,8 +15,8 @@ export default function CurrencyInfo() {
                     <p>Icons from https://fontawesome.com/</p>
                 </div>
                 <div className="col-md-6 text-center ">
-                    <p>For Central African CFA franc we have used Cameroon's flag, since it is the most populous country with its estimated 26,5 million inhabitants.</p>
-                    <p>The same was done for the West African CFA franc, using Ivory Coast's flag. (Estimated population: 26,3 million.)</p>
+                    <p>For the Euro we have used Germany's flag, since it is the most populous country with its estimated 83,2 million inhabitants.</p>
+                    <p>The same was done for the Central African and West African CFA franc, using Cameroon and Ivory Coast's flag, respectively. (Estimated populations: 26,5 and 26,3 million.)</p>
                 </div>
             </div>
         </div>

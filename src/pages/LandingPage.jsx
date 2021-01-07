@@ -13,7 +13,7 @@ export default function LandingPage() {
                     <div className="d-flex align-items-center justify-content-center">
                         <audio
                             controls
-                            src="/audio/intro.mp3">
+                            src="./audio/intro.mp3">
                             Your browser does not support the <code>audio</code> element.
                         </audio>
                     </div>

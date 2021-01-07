@@ -14,8 +14,8 @@ export default function CryptoList({ value, id }) {
           </div>
           <img
             className="pt-4 pb-4"
-            src={`/icons/${value.name}.png`}
-            alt="Error"
+            src={`./icons/${value.name}.png`}
+            alt={`Icon of ${value.name}`}
           />
 
           <p>Price: {value.price}</p>

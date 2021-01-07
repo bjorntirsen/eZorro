@@ -6,7 +6,7 @@ export default function CurrenciesPage() {
     const [currencyList, setCurrencyList] = useState(null)
     const [countryFacts, setCountryFacts] = useState(null)
     const [altList, setAltList] = useState(null)
-    const url1 = "https://market-data-collector.firebaseio.com/market-collector/currencies/sek.json"
+    const url1 = "https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/currencies/sek.json"
     const url2 = "https://restcountries-v1.p.rapidapi.com/all"
 
     function getCountryCode(key) {

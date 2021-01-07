@@ -19,7 +19,7 @@ export default function CurrenciesDetailPage(props) {
 
     useEffect( () => {
         setCountrycode(getCountryCode(id))
-        const url = `https://market-data-collector.firebaseio.com/market-collector/currencies/sek/${id}.json`
+        const url = `https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/currencies/sek/${id}.json`
         fetch(url)
         .then(res => res.json())
         .then(data => {

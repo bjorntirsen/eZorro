@@ -6,7 +6,7 @@ export default function IndexDetailPage(props) {
     const id = props.match.params.id
 
     useEffect(()=> {   
-        const url = `https://market-data-collector.firebaseio.com/market-collector/indexes/se/${id}.json`
+        const url = `https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/indexes/se/${id}.json`
         fetch(url)
         .then(resp => resp.json())
         .then(data => setIndexItem(data))

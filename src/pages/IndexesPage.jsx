@@ -6,7 +6,7 @@ export default function IndexesPage() {
     const [indexesList, setIndexesList] = useState(null)
 
     useEffect(() =>{
-        const url = "https://market-data-collector.firebaseio.com/market-collector/indexes.json"
+        const url = "https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/indexes.json"
         fetch(url)
         .then(resp => resp.json())
         .then(data => setIndexesList(data.se))

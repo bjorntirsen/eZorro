@@ -6,7 +6,7 @@ export default function CryptoPage() {
 
   useEffect(() => {
     const url =
-      "https://market-data-collector.firebaseio.com/market-collector/crypto/.json"
+      "https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/crypto/.json"
     fetch(url)
       .then((res) => res.json())
       .then((data) => setCryptoList(data.usd))

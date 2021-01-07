@@ -7,7 +7,7 @@ export default function MarketDetailPage(props) {
     const marketDisplayName = formatName(props.match.params.marketname)
     
     useEffect(() => {
-        const url = `https://market-data-collector.firebaseio.com/market-collector/${path}.json`
+        const url = `https://stock-market-dummy-api-default-rtdb.europe-west1.firebasedatabase.app/market-collector/${path}.json`
         fetch(url)
         .then(res => res.json())
         .then(data => setstockList(data))

@@ -10,11 +10,7 @@ import './styles/CurrencyStyles.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    <HashRouter basename="/">
-=======
     <BrowserRouter>
->>>>>>> parent of 81552a9 (✨Publish repo to gh-pages)
       <App />
     </BrowserRouter>
   </React.StrictMode>,

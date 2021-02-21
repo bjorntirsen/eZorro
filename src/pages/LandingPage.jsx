@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import intro from './audio/intro.mp3'
 
 export default function LandingPage() {
     return (
@@ -13,7 +14,7 @@ export default function LandingPage() {
                     <div className="d-flex align-items-center justify-content-center">
                         <audio
                             controls
-                            src="./audio/intro.mp3">
+                            src={intro}>
                             Your browser does not support the <code>audio</code> element.
                         </audio>
                     </div>

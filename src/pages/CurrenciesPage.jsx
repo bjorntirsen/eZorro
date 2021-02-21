@@ -16,7 +16,7 @@ export default function CurrenciesPage() {
         else if (tmp === "eu") return "de"
         else return tmp
     }
-
+//Adding comment to test repo
     useEffect( () => {
         fetch(url1)
         .then(res => res.json())

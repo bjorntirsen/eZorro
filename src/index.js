@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/CurrencyStyles.scss'
-import { HashRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <HashRouter basename="/">
+=======
+    <BrowserRouter>
+>>>>>>> parent of 81552a9 (✨Publish repo to gh-pages)
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
